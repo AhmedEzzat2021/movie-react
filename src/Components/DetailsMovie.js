@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Row, Col } from "react-bootstrap";
-import { useParams } from "react-router-dom";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Col, Row } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 
 export const DetailsMovie = () => {
   const [movie, setMovie] = useState([]);
@@ -38,7 +38,7 @@ export const DetailsMovie = () => {
         <p className="mb-3">{movie.overview}</p>
       </Row>
       <div className="d-flex justify-content-center mt-3 p-2">
-        <a href="/">
+        <a href="/movie-react">
           <button className="btn btn-primary mx-2">عودة للرئيسية</button>
         </a>
         <a href={movie.homepage}>

@@ -1,7 +1,7 @@
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Navbar from "react-bootstrap/Navbar";
-import React from "react";
 import logo from "../images/logoMovies.jpg";
 
 function NavBar({ serachMovies }) {
@@ -12,7 +12,7 @@ function NavBar({ serachMovies }) {
   return (
     <Navbar bg="light" expand="lg" variant="light" className="shadow-sm ">
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/movie-react">
           <img className="logo" src={logo} alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
