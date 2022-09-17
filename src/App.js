@@ -1,11 +1,11 @@
-import NavbarComp from "./Components/Navbar";
-import MovieList from "./Components/movieList";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { DetailsMovie } from "./Components/DetailsMovie";
+import MovieList from "./Components/movieList";
+import NavbarComp from "./Components/Navbar";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -53,7 +53,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route
-              path="/"
+              path="/movie-react"
               element={<MovieList movies={movies} getPageMovies={getPageMovies} pageCount={pageCount} />}
             />
             <Route path="/movie/:id" element={<DetailsMovie />} />
